@@ -19,7 +19,6 @@ public class Demo3ChainMethods {
 		FileInputStream file=new FileInputStream("files/new_pet.json");
 		JsonPath jsonPath=new JsonPath(file);
 		
-		
 		String requestBody= jsonPath.prettify();
 		System.out.println(requestBody);
 		

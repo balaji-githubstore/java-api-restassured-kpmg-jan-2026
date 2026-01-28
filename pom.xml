@@ -22,6 +22,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>tools.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>3.0.4</version>
+			<scope>compile</scope>
+		</dependency>
+
 	</dependencies>
 
 
