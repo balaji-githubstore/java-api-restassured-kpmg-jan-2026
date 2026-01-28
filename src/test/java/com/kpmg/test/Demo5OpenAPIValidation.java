@@ -32,7 +32,6 @@ public class Demo5OpenAPIValidation {
                 .statusCode(200).extract().as(Pet.class);
 
         System.out.println(responsePetObj.getId());
-
 	}
 	
 	

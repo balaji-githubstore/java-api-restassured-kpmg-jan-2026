@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 28 12:59:08 IST 2026</td>
+<td>Started on:</td><td>Wed Jan 28 13:25:43 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11114 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11309 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,193 +76,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.kpmg.test.Demo5OpenAPIValidation.findPetByIdWithOpenAPIValidationTest()'><b>findPetByIdWithOpenAPIValidationTest</b><br>Test class: com.kpmg.test.Demo5OpenAPIValidation</td>
-<td><div><pre>com.atlassian.oai.validator.restassured.OpenApiValidationFilter$OpenApiValidationException: {
-  &quot;messages&quot; : [ {
-    &quot;key&quot; : &quot;validation.response.body.schema.type&quot;,
-    &quot;level&quot; : &quot;ERROR&quot;,
-    &quot;message&quot; : &quot;[Path &apos;/id&apos;] Instance type (integer) does not match any allowed primitive type (allowed: [\&quot;string\&quot;])&quot;,
-    &quot;context&quot; : {
-      &quot;requestPath&quot; : &quot;/v2/pet/605&quot;,
-      &quot;responseStatus&quot; : 200,
-      &quot;location&quot; : &quot;RESPONSE&quot;,
-      &quot;pointers&quot; : {
-        &quot;instance&quot; : &quot;/id&quot;,
-        &quot;schema&quot; : &quot;/properties/id&quot;
-      },
-      &quot;requestMethod&quot; : &quot;GET&quot;
-    }
-  } ]
-}
-	at com.atlassian.oai.validator.restassured.OpenApiValidationFilter.filter(OpenApiValidationFilter.java:61)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
-	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy:174)
-	at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.Closure.call(Closure.java:471)
-	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
-	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
-	at jdk.proxy1/jdk.proxy1.$Proxy22.get(Unknown Source)
-	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:173)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at com.kpmg.test.Demo5OpenAPIValidation.findPetByIdWithOpenAPIValidationTest(Demo5OpenAPIValidation.java:30)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1221376818", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1221376818'><pre>com.atlassian.oai.validator.restassured.OpenApiValidationFilter$OpenApiValidationException: {
-  &quot;messages&quot; : [ {
-    &quot;key&quot; : &quot;validation.response.body.schema.type&quot;,
-    &quot;level&quot; : &quot;ERROR&quot;,
-    &quot;message&quot; : &quot;[Path &apos;/id&apos;] Instance type (integer) does not match any allowed primitive type (allowed: [\&quot;string\&quot;])&quot;,
-    &quot;context&quot; : {
-      &quot;requestPath&quot; : &quot;/v2/pet/605&quot;,
-      &quot;responseStatus&quot; : 200,
-      &quot;location&quot; : &quot;RESPONSE&quot;,
-      &quot;pointers&quot; : {
-        &quot;instance&quot; : &quot;/id&quot;,
-        &quot;schema&quot; : &quot;/properties/id&quot;
-      },
-      &quot;requestMethod&quot; : &quot;GET&quot;
-    }
-  } ]
-}
-	at com.atlassian.oai.validator.restassured.OpenApiValidationFilter.filter(OpenApiValidationFilter.java:61)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
-	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy:174)
-	at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.Closure.call(Closure.java:471)
-	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
-	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
-	at jdk.proxy1/jdk.proxy1.$Proxy22.get(Unknown Source)
-	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:173)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at com.kpmg.test.Demo5OpenAPIValidation.findPetByIdWithOpenAPIValidationTest(Demo5OpenAPIValidation.java:30)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>10</td>
-<td>com.kpmg.test.Demo5OpenAPIValidation@28701274</td></tr>
+<td title='com.kpmg.test.Demo6Git.listAllRepoForUserBearerTest()'><b>listAllRepoForUserBearerTest</b><br>Test class: com.kpmg.test.Demo6Git</td>
+<td></td>
+<td>11</td>
+<td>com.kpmg.test.Demo6Git@36fc695d</td></tr>
 </table><p>
 </body>
 </html>
