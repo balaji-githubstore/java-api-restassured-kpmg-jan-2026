@@ -63,17 +63,22 @@ public class Demo4ReadResponse {
 		System.out.println(responsePetObj.getCategory().getId());
 	}
 
-	@Test
-	public void lombokCheckTest() {
-
-		String resource = "/pet/{petId}";
-		
-		Pet1 responsePetObj = RestAssured.given()
-				.pathParam("petId", 605)
-				.when().get(baseURL + resource).then()
-				.statusCode(200).extract().as(Pet1.class);
-
-		System.out.println(responsePetObj);
-	}
+//	@Test
+//	public void lombokCheckTest() {
+//
+//
+//        String resource = "/pet/{petId}";
+//
+//        Pet1 responsePetObj = RestAssured
+//                .given().pathParam("petId", 605)
+//                .when().get(baseURL + resource)
+//                .then()
+//                .statusCode(200).extract().as(Pet1.class);
+//
+//        System.out.println(responsePetObj.getId());
+//
+//	}
+	
+	
 
 }

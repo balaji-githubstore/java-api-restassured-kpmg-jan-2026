@@ -5,7 +5,7 @@
     <classes>
       <class name="com.kpmg.test.Demo4ReadResponse">
         <methods>
-          <include name="findValidPetIdTest"/>
+          <include name="lombokCheckTest"/>
         </methods>
       </class> <!-- com.kpmg.test.Demo4ReadResponse -->
     </classes>
