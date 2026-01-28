@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse--1433562107\testng-customsuite.xml</span>
+                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse--214135265\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.kpmg.test.Demo4ReadResponse" class="method navigator-link" hash-for-method="lombokCheckTest">lombokCheckTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.kpmg.test.Demo5OpenAPIValidation" class="method navigator-link" hash-for-method="findPetByIdWithOpenAPIValidationTest">findPetByIdWithOpenAPIValidationTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,18 +121,79 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.kpmg.test.Demo4ReadResponse</span>
+              <span class="class-name">com.kpmg.test.Demo5OpenAPIValidation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="lombokCheckTest">
-                  </a> <!-- lombokCheckTest -->
-                  <span class="method-name">lombokCheckTest</span>
-                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
-	The method getId() is undefined for the type Pet1
-
-	at com.kpmg.test.Demo4ReadResponse.lombokCheckTest(Demo4ReadResponse.java:78)
+                  <a name="findPetByIdWithOpenAPIValidationTest">
+                  </a> <!-- findPetByIdWithOpenAPIValidationTest -->
+                  <span class="method-name">findPetByIdWithOpenAPIValidationTest</span>
+                  <div class="stack-trace">com.atlassian.oai.validator.restassured.OpenApiValidationFilter$OpenApiValidationException: {
+  &quot;messages&quot; : [ {
+    &quot;key&quot; : &quot;validation.response.body.schema.type&quot;,
+    &quot;level&quot; : &quot;ERROR&quot;,
+    &quot;message&quot; : &quot;[Path &apos;/id&apos;] Instance type (integer) does not match any allowed primitive type (allowed: [\&quot;string\&quot;])&quot;,
+    &quot;context&quot; : {
+      &quot;requestPath&quot; : &quot;/v2/pet/605&quot;,
+      &quot;responseStatus&quot; : 200,
+      &quot;location&quot; : &quot;RESPONSE&quot;,
+      &quot;pointers&quot; : {
+        &quot;instance&quot; : &quot;/id&quot;,
+        &quot;schema&quot; : &quot;/properties/id&quot;
+      },
+      &quot;requestMethod&quot; : &quot;GET&quot;
+    }
+  } ]
+}
+	at com.atlassian.oai.validator.restassured.OpenApiValidationFilter.filter(OpenApiValidationFilter.java:61)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy:174)
+	at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy22.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:173)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at com.kpmg.test.Demo5OpenAPIValidation.findPetByIdWithOpenAPIValidationTest(Demo5OpenAPIValidation.java:30)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -168,7 +229,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse--1433562107\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse--214135265\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -177,11 +238,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.kpmg.test.Demo4ReadResponse&quot;&gt;
+      &lt;class name=&quot;com.kpmg.test.Demo5OpenAPIValidation&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;lombokCheckTest&quot;/&gt;
+          &lt;include name=&quot;findPetByIdWithOpenAPIValidationTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.kpmg.test.Demo4ReadResponse --&gt;
+      &lt;/class&gt; &lt;!-- com.kpmg.test.Demo5OpenAPIValidation --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -223,14 +284,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'lombokCheckTest')
-data.setCell(0, 2, 'com.kpmg.test.Demo4ReadResponse')
-data.setCell(0, 3, 55);
+data.setCell(0, 1, 'findPetByIdWithOpenAPIValidationTest')
+data.setCell(0, 2, 'com.kpmg.test.Demo5OpenAPIValidation')
+data.setCell(0, 3, 10962);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 55 ms</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -245,20 +306,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.kpmg.test.Demo4ReadResponse</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">JsonNodeTest</span>
-                <br/>
-                <span class="ignored-method-name">pojoClassTest</span>
-                <br/>
-                <span class="ignored-method-name">JsonPathTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -267,11 +317,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.kpmg.test.Demo4ReadResponse</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.kpmg.test.Demo5OpenAPIValidation</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">lombokCheckTest</span>
+                <span class="method-name">findPetByIdWithOpenAPIValidationTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

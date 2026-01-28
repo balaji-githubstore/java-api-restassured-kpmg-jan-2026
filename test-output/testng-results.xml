@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-28T12:21:54 IST" name="Default suite" finished-at="2026-01-28T12:21:54 IST" duration-ms="207">
+  <suite started-at="2026-01-28T12:59:08 IST" name="Default suite" finished-at="2026-01-28T12:59:19 IST" duration-ms="11114">
     <groups>
     </groups>
-    <test started-at="2026-01-28T12:21:54 IST" name="Default test" finished-at="2026-01-28T12:21:54 IST" duration-ms="207">
-      <class name="com.kpmg.test.Demo4ReadResponse">
-        <test-method signature="lombokCheckTest()[pri:0, instance:com.kpmg.test.Demo4ReadResponse@5b8dfcc1]" started-at="2026-01-28T12:21:54 IST" name="lombokCheckTest" finished-at="2026-01-28T12:21:54 IST" duration-ms="55" status="FAIL">
-          <exception class="java.lang.Error">
+    <test started-at="2026-01-28T12:59:08 IST" name="Default test" finished-at="2026-01-28T12:59:19 IST" duration-ms="11114">
+      <class name="com.kpmg.test.Demo5OpenAPIValidation">
+        <test-method signature="findPetByIdWithOpenAPIValidationTest()[pri:0, instance:com.kpmg.test.Demo5OpenAPIValidation@28701274]" started-at="2026-01-28T12:59:08 IST" name="findPetByIdWithOpenAPIValidationTest" finished-at="2026-01-28T12:59:19 IST" duration-ms="10962" status="FAIL">
+          <exception class="com.atlassian.oai.validator.restassured.OpenApiValidationFilter$OpenApiValidationException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-The method getId() is undefined for the type Pet1
-]]>
+              <![CDATA[{
+  "messages" : [ {
+    "key" : "validation.response.body.schema.type",
+    "level" : "ERROR",
+    "message" : "[Path '/id'] Instance type (integer) does not match any allowed primitive type (allowed: [\"string\"])",
+    "context" : {
+      "requestPath" : "/v2/pet/605",
+      "responseStatus" : 200,
+      "location" : "RESPONSE",
+      "pointers" : {
+        "instance" : "/id",
+        "schema" : "/properties/id"
+      },
+      "requestMethod" : "GET"
+    }
+  } ]
+}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-The method getId() is undefined for the type Pet1
-
-at com.kpmg.test.Demo4ReadResponse.lombokCheckTest(Demo4ReadResponse.java:78)
+              <![CDATA[com.atlassian.oai.validator.restassured.OpenApiValidationFilter$OpenApiValidationException: {
+  "messages" : [ {
+    "key" : "validation.response.body.schema.type",
+    "level" : "ERROR",
+    "message" : "[Path '/id'] Instance type (integer) does not match any allowed primitive type (allowed: [\"string\"])",
+    "context" : {
+      "requestPath" : "/v2/pet/605",
+      "responseStatus" : 200,
+      "location" : "RESPONSE",
+      "pointers" : {
+        "instance" : "/id",
+        "schema" : "/properties/id"
+      },
+      "requestMethod" : "GET"
+    }
+  } ]
+}
+at com.atlassian.oai.validator.restassured.OpenApiValidationFilter.filter(OpenApiValidationFilter.java:61)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy:174)
+at io.restassured.internal.RequestSpecificationImpl$_get_closure1.doCall(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.Closure.call(Closure.java:471)
+at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+at jdk.proxy1/jdk.proxy1.$Proxy22.get(Unknown Source)
+at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:173)
+at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+at com.kpmg.test.Demo5OpenAPIValidation.findPetByIdWithOpenAPIValidationTest(Demo5OpenAPIValidation.java:30)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -47,11 +122,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- com.atlassian.oai.validator.restassured.OpenApiValidationFilter$OpenApiValidationException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- lombokCheckTest -->
-      </class> <!-- com.kpmg.test.Demo4ReadResponse -->
+        </test-method> <!-- findPetByIdWithOpenAPIValidationTest -->
+      </class> <!-- com.kpmg.test.Demo5OpenAPIValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

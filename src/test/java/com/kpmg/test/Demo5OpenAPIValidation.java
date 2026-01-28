@@ -3,6 +3,7 @@ package com.kpmg.test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.atlassian.oai.validator.restassured.OpenApiValidationFilter;
 import com.kpmg.model.Pet;
 import com.kpmg.model.Pet1;
 
@@ -16,11 +17,16 @@ public class Demo5OpenAPIValidation {
 	
 	@Test
 	public void findPetByIdWithOpenAPIValidationTest() {
+		
+		OpenApiValidationFilter validator=new OpenApiValidationFilter("files/petstore.yaml");
+		//either pass the path as string or file object
 
         String resource = "/pet/{petId}";
 
         Pet responsePetObj = RestAssured
-                .given().pathParam("petId", 605)
+                .given()
+                .filter(validator)
+                .pathParam("petId", 605)
                 .when().get(baseURL + resource)
                 .then()
                 .statusCode(200).extract().as(Pet.class);
