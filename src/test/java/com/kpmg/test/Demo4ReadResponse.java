@@ -3,6 +3,8 @@ package com.kpmg.test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.kpmg.model.Pet;
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import tools.jackson.databind.JsonNode;
@@ -51,7 +53,20 @@ public class Demo4ReadResponse {
 		System.out.println(response.get("tags").get(0).get("id").asInt());
 	}
 	
-	
-	
+	/**
+	 * Use pojo class for automation. Type safety, easy maintenance, stable for automation, schema validation
+	 */
+	@Test
+	public void pojoClassTest()
+	{
+		String resource = "/pet/{petId}"; 
+		
+		Pet responsePetObj= RestAssured
+		.given().pathParam("petId", 605)
+		.when().get(baseURL+resource)
+		.then().statusCode(200).extract().as(Pet.class);
 
+		System.out.println(responsePetObj.getId());
+		System.out.println(responsePetObj.getCategory().getId());
+	}
 }
