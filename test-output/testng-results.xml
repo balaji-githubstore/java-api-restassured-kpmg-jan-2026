@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-28T11:10:52 IST" name="Default suite" finished-at="2026-01-28T11:11:45 IST" duration-ms="53218">
+  <suite started-at="2026-01-28T11:53:56 IST" name="Default suite" finished-at="2026-01-28T11:54:21 IST" duration-ms="25044">
     <groups>
     </groups>
-    <test started-at="2026-01-28T11:10:52 IST" name="Default test" finished-at="2026-01-28T11:11:45 IST" duration-ms="53218">
+    <test started-at="2026-01-28T11:53:56 IST" name="Default test" finished-at="2026-01-28T11:54:21 IST" duration-ms="25044">
       <class name="com.kpmg.test.Demo4ReadResponse">
-        <test-method signature="pojoClassTest()[pri:0, instance:com.kpmg.test.Demo4ReadResponse@3e8c3cb]" started-at="2026-01-28T11:10:52 IST" name="pojoClassTest" finished-at="2026-01-28T11:11:45 IST" duration-ms="53055" status="PASS">
+        <test-method signature="lombokCheckTest()[pri:0, instance:com.kpmg.test.Demo4ReadResponse@54422e18]" started-at="2026-01-28T11:53:57 IST" name="lombokCheckTest" finished-at="2026-01-28T11:54:21 IST" duration-ms="24867" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pojoClassTest -->
+        </test-method> <!-- lombokCheckTest -->
       </class> <!-- com.kpmg.test.Demo4ReadResponse -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

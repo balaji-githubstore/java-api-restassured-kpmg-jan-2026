@@ -5,7 +5,12 @@
 	<groupId>com.kpmg</groupId>
 	<artifactId>APIAutomationRestAssured</artifactId>
 	<version>1.0</version>
-
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
 	<dependencies>
 
 		<dependency>
@@ -26,6 +31,13 @@
 			<groupId>tools.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>3.0.4</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.42</version>
 			<scope>compile</scope>
 		</dependency>
 
