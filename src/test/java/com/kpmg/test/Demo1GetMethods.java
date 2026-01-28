@@ -1,5 +1,6 @@
 package com.kpmg.test;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -22,6 +23,8 @@ public class Demo1GetMethods {
 		.then().statusCode(200).extract().asPrettyString();
 		
 		System.out.println(response);
+		
+		Assert.assertTrue(response.contains("605"));  //expect true
 	}
 
 	@Test

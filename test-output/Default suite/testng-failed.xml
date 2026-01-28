@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.kpmg.test.Demo1GetMethods">
+      <class name="com.kpmg.test.Demo2PostMethods">
         <methods>
-          <include name="findpetByValidStatus"/>
+          <include name="findValidPetIdTest"/>
         </methods>
-      </class> <!-- com.kpmg.test.Demo1GetMethods -->
+      </class> <!-- com.kpmg.test.Demo2PostMethods -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,48 +9,16 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
-public class Demo2PostMethods {
+public class Demo3ChainMethods {
+	
 	public String baseURL="https://petstore.swagger.io/v2";
-	
-	@Test
-	public void addValidPetTest()
-	{
-		String resource="/pet";
-		
-		String requestBody="{\r\n"
-				+ "  \"id\": 605,\r\n"
-				+ "  \"category\": {\r\n"
-				+ "    \"id\": 0,\r\n"
-				+ "    \"name\": \"string\"\r\n"
-				+ "  },\r\n"
-				+ "  \"name\": \"doggie-606\",\r\n"
-				+ "  \"photoUrls\": [\r\n"
-				+ "    \"string\"\r\n"
-				+ "  ],\r\n"
-				+ "  \"tags\": [\r\n"
-				+ "    {\r\n"
-				+ "      \"id\": 0,\r\n"
-				+ "      \"name\": \"string\"\r\n"
-				+ "    }\r\n"
-				+ "  ],\r\n"
-				+ "  \"status\": \"available\"\r\n"
-				+ "}";
-		
-		String response= RestAssured
-				.given()
-				.header("Content-Type", "application/json")
-				.body(requestBody)
-				.when().post(baseURL+resource)
-				.then().statusCode(200).extract().asPrettyString();
-				
-				System.out.println(response);
-	}
-	
-	@Test
+
+	@Test(priority = 1)
 	public void addValidPetFromJsonTest() throws FileNotFoundException
 	{
 		FileInputStream file=new FileInputStream("files/new_pet.json");
 		JsonPath jsonPath=new JsonPath(file);
+		
 		
 		String requestBody= jsonPath.prettify();
 		System.out.println(requestBody);
@@ -67,10 +35,7 @@ public class Demo2PostMethods {
 				System.out.println(response);
 	}
 	
-	/**
-	 * put request
-	 */
-	@Test
+	@Test(priority = 2)
 	public void updateValidPetFromJsonTest() throws FileNotFoundException
 	{
 		FileInputStream file=new FileInputStream("files/update_pet.json");
@@ -91,8 +56,22 @@ public class Demo2PostMethods {
 				System.out.println(response);
 	}
 	
-	//Delete pet by id 705
-	@Test
+	@Test(priority = 3)
+	public void findValidPetIdTest()
+	{
+		String resource = "/pet/{petId}"; 
+		
+		String response= RestAssured
+		.given().pathParam("petId", 705)
+		.when().get(baseURL+resource)
+		.then().statusCode(200).extract().asPrettyString();
+		
+		System.out.println(response);
+		
+		Assert.assertTrue(response.contains("705"));  //expect true
+	}
+	
+	@Test(priority = 4)
 	public void deleteValidPetIdTest()
 	{
 		String resource = "/pet/{petId}"; 
@@ -105,14 +84,5 @@ public class Demo2PostMethods {
 		.then().statusCode(200).extract().asPrettyString();
 		
 		System.out.println(response);
-		
-		
-	}
-	
-	
+	}	
 }
-
-
-
-
-
