@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import tools.jackson.databind.JsonNode;
 
 public class Demo4ReadResponse {
 	public String baseURL="https://petstore.swagger.io/v2";
@@ -31,22 +32,26 @@ public class Demo4ReadResponse {
 		System.out.println(response.getString("category.id"));
 	}
 	
+	/**
+	 * not recommended for complete validation. 
+	 */
 	@Test
 	public void JsonNodeTest()
 	{
-		
 		String resource = "/pet/{petId}"; 
 		
-		JsonPath response= RestAssured
+		JsonNode response= RestAssured
 		.given().pathParam("petId", 605)
 		.when().get(baseURL+resource)
-		.then().statusCode(200).extract().jsonPath();
+		.then().statusCode(200).extract().as(JsonNode.class);
+
+		System.out.println(response.get("id"));
+		System.out.println(response.get("category").get("id").asInt());
 		
-		System.out.println(response.prettify());
-		System.out.println(response.getInt("id"));
-		
-		System.out.println(response.getString("name"));
-		System.out.println(response.getString("category.id"));
+		System.out.println(response.get("tags").get(0).get("id").asInt());
 	}
+	
+	
+	
 
 }
